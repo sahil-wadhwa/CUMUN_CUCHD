@@ -39,7 +39,7 @@ const ParallaxGallery = () => {
               {section.title}
             </h1>
             <p className="text-lg md:text-xl max-w-xl">{section.desc}</p>
-            <button className="mt-6 w-[10vw] h-[5vh] bg-transparent border border-2 border-white text-white rounded-lg hover:bg-red-700 transition duration-300">{section.buttonText}</button>
+            <button className="mt-6 w-[14vw] max-sm:w-[19vw] px-5 h-[5vh] max-sm:h-[15vh] max-sm:text-center flex items-center justify-center bg-transparent border border-2 border-white text-white rounded-lg hover:bg-red-700 transition duration-300">{section.buttonText}</button>
           </div>
         </div>
       ))}

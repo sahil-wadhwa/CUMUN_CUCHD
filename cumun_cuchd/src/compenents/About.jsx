@@ -6,7 +6,6 @@ const About = () => {
   const [vantaEffect, setVantaEffect] = useState(null);
 
   useEffect(() => {
-    // Only import on client side
     const loadVanta = async () => {
       const VANTA = await import("vanta/dist/vanta.globe.min");
       if (!vantaEffect) {
@@ -15,16 +14,16 @@ const About = () => {
             el: vantaRef.current,
             THREE: THREE,
             mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x0,
-        color2: 0x7,
-        size: 1.30,
-        backgroundColor: 0xe35151
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0x000000,
+            color2: 0x777777,
+            size: 1.3,
+            backgroundColor: 0xe35151,
           })
         );
       }
@@ -38,20 +37,28 @@ const About = () => {
   }, [vantaEffect]);
 
   return (
-    <div ref={vantaRef} className="w-full h-screen flex text-white p-10 flex-col">
-        <div className="text-4xl font-extrabold text-white mb-5">About CUMUN</div>
-      <h1 className="text-lg font-bold z-10 w-[60vw] text-justify">The Chandigarh University Model United Nations (CUMUN) Conference is a premier platform for young leaders to engage in diplomatic simulations, addressing global challenges 
-        through debate, research, and collaboration. Established in 2015, CU MUN has grown into on
-        e of India’s most prestigious MUN conferences, attracting diverse talent from across the nation.</h1>
-        <div className="text-2xl mt-[8vh] font-extrabold text-center uppercase w-[50vw]">Our Previous Edition</div>
-        <video className="w-full h-[60vh] mt-5 object-cover rounded-lg shadow-lg"
-        style={{width:'50vw', height:'50vh'}}
-        autoPlay
-        muted
-        loop
+    <div ref={vantaRef} className="w-full h-full min-h-screen flex flex-col max-sm:items-center max-sm:justify-center  text-white p-6 sm:p-10">
+      <div className="text-3xl sm:text-4xl font-extrabold mb-6 text-start max-sm:text-center">About CUMUN</div>
+
+      <h1 className="text-base sm:text-lg font-medium z-10 max-w-4xl text-justify">
+        The Chandigarh University Model United Nations (CUMUN) Conference is a premier platform for
+        young leaders to engage in diplomatic simulations, addressing global challenges through
+        debate, research, and collaboration. Established in 2015, CU MUN has grown into one of
+        India’s most prestigious MUN conferences, attracting diverse talent from across the nation.
+      </h1>
+
+      <div className="text-xl sm:text-2xl mt-10 font-extrabold text-center uppercase">Our Previous Edition</div>
+
+      <div className="w-full max-w-3xl mt-6">
+        <video
+          className="w-full h-auto rounded-lg shadow-lg"
+          autoPlay
+          muted
+          loop
         >
-            <source src="/assets/clip1.MOV" type="video/mp4" />
+          <source src="/assets/clip1.MOV" type="video/mp4" />
         </video>
+      </div>
     </div>
   );
 };
