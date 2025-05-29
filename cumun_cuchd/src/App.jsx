@@ -5,6 +5,8 @@ import Navbar from './compenents/Navbar'
 import About from './compenents/About'
 import ParralaxGallery from './compenents/ParallaxGallery'
 import Committees from './compenents/Committees'
+import Footer from './compenents/Footer'
+import Registration from './compenents/Registration'
 
 function App() {
   return(
@@ -14,6 +16,8 @@ function App() {
       <About/>
       <ParralaxGallery/>
       <Committees/>
+      <Registration/>
+      <Footer/>
     </div>
   )
 }
