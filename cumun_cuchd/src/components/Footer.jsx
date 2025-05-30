@@ -35,12 +35,12 @@ const Footer = () => {
       }, [vantaEffect1]);
     
   return (
-    <footer ref={vantaRef} className="text-white">
-      <div className="container mx-auto px-6 py-14">
+    <footer ref={vantaRef} className="text-white font-[Merriweather,serif] text-sm lg:text-base">
+      <div className="container mx-auto px-8 lg:px-16 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* About Section */}
           <div>
-            <h3 className="text-2xl font-semibold mb-5 tracking-wide">ISTE Student Chapter</h3>
+            <h3 className="text-xl font-semibold mb-5 tracking-wide">ISTE Student Chapter</h3>
             <p className="mb-6 text-red-100 leading-relaxed font-light">
               The ISTE Student Chapter at Chandigarh University fosters innovation, collaboration, and technical excellence among students by organizing workshops, seminars, and projects.
             </p>
@@ -60,15 +60,15 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-2xl font-semibold mb-5 tracking-wide">Quick Links</h3>
+            <h3 className="text-xl font-semibold mb-5 tracking-wide">Quick Links</h3>
             <ul className="space-y-3 text-red-100 font-medium">
               {[
-                { label: "Home", href: "#home" },
-                { label: "About", href: "#about" },
-                { label: "Events", href: "#events" },
-                { label: "Team", href: "#team" },
-                { label: "Gallery", href: "#gallery" },
-                { label: "Contact", href: "#contact" },
+                { label: "Home", href: "/" },
+                { label: "About", href: "/" },
+                { label: "Events", href: "/schedule" },
+                { label: "Team", href: "/faculty" },
+                { label: "Gallery", href: "/" },
+                { label: "Contact", href: "/" },
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-2xl font-semibold mb-5 tracking-wide">Resources</h3>
+            <h3 className="text-xl font-semibold mb-5 tracking-wide">Resources</h3>
             <ul className="space-y-3 text-red-100 font-medium">
               {[
                 "Workshops",
@@ -105,7 +105,7 @@ const Footer = () => {
 
           {/* Contact Us */}
           <div>
-            <h3 className="text-2xl font-semibold mb-5 tracking-wide">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-5 tracking-wide">Contact Us</h3>
             <ul className="space-y-5 text-red-100 font-light text-sm leading-relaxed">
               <li className="flex items-start">
                 <MapPin size={22} className="mr-3 text-red-300 flex-shrink-0 mt-1" />
