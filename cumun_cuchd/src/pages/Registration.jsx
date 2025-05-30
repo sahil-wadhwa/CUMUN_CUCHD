@@ -120,44 +120,14 @@ const Registration = () => {
       </section>
     );
   }
-  const vantaRef = useRef(null);
-    const [vantaEffect1, setVantaEffect1] = useState(null);
-
-    useEffect(() => {
-        const loadVanta = async () => {
-          const VANTA = await import("vanta/dist/vanta.dots.min");
-          if (!vantaEffect1) {
-            setVantaEffect1(
-              VANTA.default({
-                el: vantaRef.current,
-                mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0xed1111,
-  showLines: false
-              })
-            );
-          }
-        };
-    
-        loadVanta();
-    
-        return () => {
-          if (vantaEffect1) vantaEffect1.destroy();
-        };
-      }, [vantaEffect1]);
 
   return (
-    <section ref={vantaRef} id="registration" className="py-20 bg-gray-50">
+    <section  id="registration" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">Registration</h2>
-          <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
-          <p className="text-white max-w-3xl mx-auto">
+          <div className="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+          <p className="text-black max-w-3xl mx-auto">
             Join us for the CU-MUN Conference 2025. Fill out the form below to register as a delegate. Early
             registration is recommended as committee spots fill up quickly.
           </p>
